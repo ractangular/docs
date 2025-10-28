@@ -1,0 +1,55 @@
+site_name: Dokumentasi Product
+site_url: https://sitename.example
+theme:
+  name: material
+  font: 
+    text: Noto Sans
+    code: Red Hat Mono
+  # icon:
+  #   logo: fontawesome/solid/w
+  logo: assets/logo/icon.png
+  favicon: assets/logo/favicon.png
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - content.footnote.tooltips
+  palette: 
+    # Dark Mode
+    - scheme: slate
+      toggle: 
+        icon: material/weather-snowy
+        name: Dark mode
+      primary: blue
+      accent: blue grey
+    # Light Mode
+    - scheme: default
+      toggle: 
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: light blue
+  
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/username
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/username
+
+copyright: Copyright 2025 &copy Asep Septiadi. All right reserved.
